@@ -1,0 +1,22 @@
+<div class="container">
+<h2>Crear pelicula</h2>
+
+<%=form_for @pelicula do |p| %>
+    <div class="field">
+     <%=p.text_field :name, placeholder: "Nombre", class:"form-control" %>
+    </div>
+    <div class="field">
+     <%=p.text_field :stars, placeholder: "Estrellas", class:"form-control" %>
+    </div>
+    <div class="field">
+     <%=p.text_field :main_actor, placeholder: "Actor principal", class:"form-control" %>
+    </div>
+    <div class="field">
+     <%=p.text_field :year, placeholder: "Año", class:"form-control" %>
+    </div>
+    <div class="field">
+    <%=p.submit "Añadir", class:"btn btn-md btn-danger white pull-right" %>
+    </div>
+    <% end %>
+<%= link_to "Back",  peliculas_path, class:"btn btn-md btn-success" %>
+</div>

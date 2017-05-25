@@ -1,0 +1,15 @@
+<div class="container">
+<h1>Listado de Peliculas</h1>
+
+<% @peliculas.each do |peli| %>
+	<p>Nombre :<%= link_to peli.name %></p>
+	<p>Estrellas: <%= peli.stars %></p>
+	<p>Actor principal: <%= peli.main_actor %></p>
+	<p>Año: <%= peli.year %></p>
+ 
+<p><%=link_to "Añadir pelicula", new_pelicula_path, class:"btn btn-md btn-success" %></p>
+<p><%=link_to "Editar pelicula", edit_pelicula_path(@peliculas), class:"btn btn-md btn-success" %></p>
+<p><%= link_to 'Eliminar', { action: :destroy, id: peli.id }, method: :delete, class:"btn btn-md btn-success" %></p>
+<% end %>
+
+</div>

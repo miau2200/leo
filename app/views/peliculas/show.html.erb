@@ -1,0 +1,10 @@
+<div class="container">
+<h1>Mostrar Pelicula</h1>
+<p>ID: <%= @pelicula.id %></p>
+<p>Nombre: <%= @pelicula.name %></p>
+<p>Estrellas: <%= @pelicula.stars %></p>
+<p>Actor principal: <%= @pelicula.main_actor %></p>
+<p>Año: <%= @pelicula.year %></p>
+<br>
+<%= link_to "Index",  peliculas_path, class:"btn btn-md btn-success" %>
+</div>
